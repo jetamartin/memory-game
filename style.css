@@ -1,0 +1,106 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.startPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: burlywood;
+  background-color: lightsteelblue
+  
+}
+
+.startPageContent {
+  align-self: center;
+  align-items: center; /* forces horizontal alignment of children (span) */
+  justify-content: center; /* forces vertical centering of child (span) */
+  text-align: center; 
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+.flip-card {
+  background-color: grey;
+  height: 16vh;
+  width: 16vw;
+  border-radius: 2rem;
+  /* height: 15vh;
+  width: 15vw; */
+  margin: .5rem;
+}
+
+#score-card {
+  background-color: lightsteelblue;
+  height: 16vh;
+  width: 16vw;
+  /* height: 15vh;
+  width: 15vw; */
+  margin: .5rem;
+  display: flex; /* Must declare as flex to use flex centering properties below */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: center; /* forces horizontal alignment ofchildren (span) */
+  justify-content: center; /* forces vertical centering of child (span) */
+}
+
+#restart {
+  font-size: .5rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  letter-spacing: .15rem;
+  border: 1px solid grey;
+  padding: .2rem;
+  border-radius: .25rem;
+  }
+
+#score-card span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+ }
+
+ 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+
+.flip-card.flipOver .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(139, 135, 145);
+}
+
+.flip-card-back {
+   transform: rotateY(180deg);
+}
